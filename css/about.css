@@ -1,0 +1,1209 @@
+/* =========================================
+   IAN MUASYA PORTFOLIO - ABOUT PAGE
+   ========================================= */
+
+
+/* ================= ROOT & RESET ================= */
+
+:root {
+    --deep-navy: #0B1220;
+    --electric-blue: #2563EB;
+    --bright-blue: #38BDF8;
+    --off-white: #F8FAFC;
+    --slate: #94A3B8;
+    --dark-slate: #111827;
+
+    --container-width: 1200px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--deep-navy);
+    color: var(--off-white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.container {
+    width: min(90%, var(--container-width));
+    margin: 0 auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background-color: rgba(11, 18, 32, 0.95);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    height: 80px;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    color: #F8FAFC;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38BDF8;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #38BDF8;
+}
+
+
+/* Navbar Button */
+
+.nav-button {
+    background-color: #2563EB;
+    color: #F8FAFC;
+
+    padding: 12px 20px;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #38BDF8;
+    color: #0B1220;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.btn-primary {
+    background: var(--electric-blue);
+    color: var(--off-white);
+}
+
+
+.btn-primary:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+
+.btn-secondary {
+    color: var(--off-white);
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+
+.btn-secondary:hover {
+    border-color: var(--bright-blue);
+    color: var(--bright-blue);
+    transform: translateY(-3px);
+}
+
+
+/* ================= SECTION BASICS ================= */
+
+section {
+    padding: 110px 0;
+}
+
+
+.section-tag {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--bright-blue);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 60px;
+}
+
+
+.section-heading h2,
+.journey-heading h2,
+.focus-intro h2,
+.looking-ahead h2 {
+    color: var(--off-white);
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+}
+
+
+.section-heading h2 span,
+.journey-heading h2 span,
+.focus-intro h2 span,
+.looking-ahead h2 span {
+    color: var(--electric-blue);
+}
+
+
+.section-heading > p {
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    color: var(--slate);
+    font-size: 1rem;
+}
+
+
+/* ================= ABOUT HERO ================= */
+
+.about-hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 150px;
+
+    overflow: hidden;
+}
+
+
+.about-hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+    align-items: center;
+}
+
+
+.about-hero-content h1 {
+    max-width: 720px;
+
+    margin-bottom: 25px;
+
+    color: var(--off-white);
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1.08;
+}
+
+
+.about-hero-content h1 span {
+    color: var(--electric-blue);
+}
+
+
+.about-hero-content p {
+    max-width: 620px;
+
+    margin-bottom: 35px;
+
+    color: var(--slate);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   ABOUT PROFILE IMAGE
+========================= */
+
+.about-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 350px;
+}
+
+.about-image-container {
+    width: 380px;
+    height: 480px;
+
+    position: relative;
+    z-index: 2;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    border: 2px solid #2563EB;
+
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.25);
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Decorative Blue Shapes */
+
+.image-accent {
+    position: absolute;
+    border-radius: 20px;
+}
+
+.accent-one {
+    width: 380px;
+    height: 480px;
+
+    border: 2px solid #38BDF8;
+
+    top: -20px;
+    right: -20px;
+
+    z-index: 1;
+}
+
+.accent-two {
+    width: 250px;
+    height: 250px;
+
+    background-color: #2563EB;
+
+    opacity: 0.12;
+
+    bottom: -40px;
+    left: -40px;
+
+    border-radius: 50%;
+
+    z-index: 0;
+}
+
+
+/* ================= MY JOURNEY ================= */
+
+.journey {
+    background: var(--dark-slate);
+}
+
+
+.journey-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+    align-items: start;
+}
+
+
+.journey-heading {
+    position: sticky;
+    top: 120px;
+}
+
+
+.journey-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.journey-text {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+.journey-text p {
+    color: var(--slate);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+
+/* Education Highlight */
+
+.education-highlight {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    gap: 25px;
+
+    padding: 35px;
+
+    background: rgba(11, 18, 32, 0.65);
+
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 16px;
+}
+
+
+.education-number {
+    color: var(--electric-blue);
+
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+
+.education-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--bright-blue);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.education-highlight h3 {
+    max-width: 550px;
+
+    margin-bottom: 12px;
+
+    color: var(--off-white);
+
+    font-size: 1.4rem;
+    line-height: 1.35;
+}
+
+
+.education-highlight p {
+    color: var(--slate);
+}
+
+
+/* ================= WHAT I DO ================= */
+
+.what-i-do {
+    background: var(--deep-navy);
+}
+
+
+.what-i-do-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+.focus-card {
+    min-height: 330px;
+
+    padding: 35px;
+
+    background: var(--dark-slate);
+
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 16px;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.focus-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(56, 189, 248, 0.5);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+.focus-icon {
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 28px;
+
+    color: var(--bright-blue);
+
+    background: rgba(37, 99, 235, 0.12);
+
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    border-radius: 14px;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+.focus-card h3 {
+    margin-bottom: 15px;
+
+    color: var(--off-white);
+
+    font-size: 1.3rem;
+}
+
+
+.focus-card p {
+    color: var(--slate);
+
+    line-height: 1.8;
+}
+
+
+/* ================= CURRENTLY FOCUSED ON ================= */
+
+.currently-focused {
+    background: var(--dark-slate);
+}
+
+
+.focus-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 90px;
+    align-items: start;
+}
+
+
+.focus-intro {
+    position: sticky;
+    top: 120px;
+}
+
+
+.focus-intro p {
+    max-width: 500px;
+
+    margin-top: 22px;
+
+    color: var(--slate);
+    line-height: 1.8;
+}
+
+
+.focus-list {
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+
+.focus-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+
+    gap: 20px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+
+    transition: padding-left 0.3s ease;
+}
+
+
+.focus-item:hover {
+    padding-left: 12px;
+}
+
+
+.focus-number {
+    color: var(--electric-blue);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+.focus-item h3 {
+    margin-bottom: 8px;
+
+    color: var(--off-white);
+
+    font-size: 1.2rem;
+}
+
+
+.focus-item p {
+    color: var(--slate);
+    line-height: 1.7;
+}
+
+
+/* ================= CREDENTIALS ================= */
+
+.credentials {
+    background: var(--deep-navy);
+}
+
+
+.credentials-heading {
+    margin-bottom: 55px;
+}
+
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+.credential-card {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+
+    gap: 28px;
+    align-items: center;
+
+    min-height: 250px;
+
+    padding: 28px;
+
+    background: var(--dark-slate);
+
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.credential-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(56, 189, 248, 0.45);
+}
+
+
+/* Badge Image Container */
+
+.badge-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    background: rgba(11, 18, 32, 0.6);
+
+    border-radius: 14px;
+}
+
+
+.badge-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* Credential Text */
+
+.credential-info > span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--bright-blue);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.credential-info h3 {
+    margin-bottom: 12px;
+
+    color: var(--off-white);
+
+    font-size: 1.2rem;
+    line-height: 1.35;
+}
+
+
+.credential-info p {
+    color: var(--slate);
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* ICDL Certificate Style */
+
+.certificate-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.18),
+            rgba(56, 189, 248, 0.05)
+        );
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.certificate-placeholder span {
+    color: var(--off-white);
+
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+.certificate-placeholder small {
+    max-width: 110px;
+
+    color: var(--slate);
+
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+
+
+/* ================= JOURNEY SO FAR ================= */
+
+.journey-so-far {
+    background: var(--dark-slate);
+}
+
+
+.milestone-list {
+    position: relative;
+
+    max-width: 850px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+
+.milestone {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    gap: 25px;
+
+    padding-bottom: 50px;
+}
+
+
+.milestone:last-child {
+    padding-bottom: 0;
+}
+
+
+.milestone::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    bottom: 0;
+
+    left: 8px;
+
+    width: 1px;
+
+    background: rgba(148, 163, 184, 0.2);
+}
+
+
+.milestone:last-child::before {
+    display: none;
+}
+
+
+.milestone-dot {
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+
+    margin-top: 8px;
+
+    background: var(--electric-blue);
+
+    border: 4px solid var(--dark-slate);
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.5);
+
+    z-index: 2;
+}
+
+
+.milestone h3 {
+    margin-bottom: 10px;
+
+    color: var(--off-white);
+
+    font-size: 1.3rem;
+}
+
+
+.milestone p {
+    max-width: 650px;
+
+    color: var(--slate);
+    line-height: 1.8;
+}
+
+
+/* ================= LOOKING AHEAD ================= */
+
+.looking-ahead {
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(37, 99, 235, 0.15),
+            transparent 55%
+        ),
+        var(--deep-navy);
+}
+
+
+.looking-ahead-content {
+    max-width: 850px;
+}
+
+
+.looking-ahead h2 {
+    margin-bottom: 25px;
+}
+
+
+.looking-ahead p {
+    max-width: 680px;
+
+    margin: 0 auto 35px;
+
+    color: var(--slate);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 50px 0;
+
+    background: #080D18;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 15px;
+}
+
+
+.footer p {
+    color: var(--slate);
+    font-size: 0.9rem;
+}
+
+
+.footer .copyright {
+    color: rgba(148, 163, 184, 0.65);
+    font-size: 0.8rem;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .about-hero-container,
+    .journey-container,
+    .focus-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .journey-heading,
+    .focus-intro {
+        position: static;
+    }
+
+
+    .about-image-wrapper {
+        justify-content: flex-start;
+    }
+
+
+    .about-image-container {
+        width: min(100%, 450px);
+    }
+
+
+    .what-i-do-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .focus-card:last-child {
+        grid-column: 1 / -1;
+        min-height: auto;
+    }
+
+
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE NAVBAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        min-height: 72px;
+
+        padding: 15px 0;
+    }
+
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+
+    .nav-links a.active::after {
+        bottom: -5px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 80px 0;
+    }
+
+
+    .container {
+        width: min(90%, var(--container-width));
+    }
+
+
+    /* Hero */
+
+    .about-hero {
+        min-height: auto;
+
+        padding-top: 160px;
+    }
+
+
+    .about-hero-container {
+        gap: 50px;
+    }
+
+
+    .about-hero-content h1 {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+    }
+
+
+    .about-hero-content p {
+        font-size: 1rem;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .about-image-wrapper {
+        justify-content: center;
+    }
+
+
+    .about-image-container {
+        width: min(100%, 330px);
+        border-radius: 20px;
+    }
+
+
+    .accent-one {
+        top: 25px;
+    }
+
+
+    .accent-two {
+        width: 75px;
+        height: 75px;
+
+        bottom: -15px;
+    }
+
+
+    /* Headings */
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2,
+    .journey-heading h2,
+    .focus-intro h2,
+    .looking-ahead h2 {
+        font-size: 2.1rem;
+    }
+
+
+    /* Journey */
+
+    .journey-container {
+        gap: 45px;
+    }
+
+
+    .education-highlight {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 25px;
+    }
+
+
+    /* What I Do */
+
+    .what-i-do-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .focus-card:last-child {
+        grid-column: auto;
+    }
+
+
+    .focus-card {
+        min-height: auto;
+        padding: 28px;
+    }
+
+
+    /* Currently Focused */
+
+    .focus-container {
+        gap: 45px;
+    }
+
+
+    .focus-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* Credentials */
+
+    .credential-card {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+
+        padding: 25px;
+    }
+
+
+    .badge-image,
+    .certificate-placeholder {
+        width: min(100%, 220px);
+        margin: 0 auto;
+    }
+
+
+    /* Timeline */
+
+    .milestone {
+        grid-template-columns: 35px 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 40px 0;
+    }
+
+}
