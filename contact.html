@@ -144,8 +144,11 @@
             <!-- ================= CONTACT FORM ================= -->
             <div class="contact-form-container">
 
-                <form class="contact-form">
-
+                <form
+    class="contact-form"
+    action="https://formspree.io/f/xnpjbopn"
+    method="POST"
+    id="contact-form">
                     <div class="form-group">
 
                         <label for="name">Your Name</label>
@@ -211,6 +214,12 @@
                     </button>
 
                 </form>
+                <div
+    id="form-status"
+    class="form-status"
+    role="status"
+    aria-live="polite"
+></div>
 
             </div>
 
@@ -238,6 +247,8 @@
         </div>
 
     </footer>
+
+    <script src="js/contact.js"></script>
 
 </body>
 

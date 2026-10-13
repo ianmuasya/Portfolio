@@ -545,3 +545,33 @@ body {
     }
 
 }
+
+/* FORM STATUS */
+
+.form-status {
+    display: none;
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-status.success {
+    display: block;
+    color: #BAE6FD;
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.form-status.error {
+    display: block;
+    color: #FCA5A5;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.send-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
