@@ -380,15 +380,44 @@ body {
 
 
 /* =========================
-   MOBILE
+   MOBILE 2.0 mode
 ========================= */
 
 @media (max-width: 768px) {
 
-    .nav-links {
-        display: none;
+    /* Mobile navbar */
+    .nav-container {
+        position: relative;
     }
 
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 20px;
+        background-color: #0B1220;
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 6px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    /* Existing hero responsiveness */
     .hero {
         padding-left: 25px;
         padding-right: 25px;
@@ -433,4 +462,34 @@ body {
 .currently-building,
 .social-links {
     justify-content: center;
+}
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    flex: none;
+    width: 22px;
+    height: 2px;
+    background-color: #F8FAFC;
+    border-radius: 2px;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
 }

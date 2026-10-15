@@ -468,138 +468,134 @@ body {
     }
 
 }
+ /* ================================
+   TABLET RESPONSIVE
+================================ */
 
 @media (max-width: 768px) {
 
+    /* Mobile Navbar */
+
     .nav-container {
+        position: relative;
+        height: 80px;
         padding: 0 20px;
+        flex-direction: row;
+        gap: 0;
     }
-
-
+    .menu-toggle {
+        display: flex;
+        width: 42px;
+        height: 42px;
+        padding: 9px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        flex-shrink: 0;
+        background: transparent;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        flex: none;
+        background-color: #F8FAFC;
+        border-radius: 2px;
+    }
     .nav-links {
-        gap: 15px;
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 20px;
+        background-color: #0B1220;
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 6px;
+        z-index: 1001;
     }
-
-
+    .nav-links.active {
+        display: flex;
+    }
     .nav-links a {
-        font-size: 0.85rem;
+        display: block;
+        padding: 12px 0;
+        font-size: 0.95rem;
     }
-
-
     .nav-button {
-        padding: 10px 16px;
-        font-size: 0.8rem;
-    }
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
 
-
+    /* Skills Layout */
     .skills-hero {
         padding: 130px 0 60px;
     }
-
-
     .skills-hero h1 {
         font-size: 2.8rem;
     }
-
-
     .technical-skills {
         padding: 50px 0 70px;
     }
-
-
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
     .tools-section {
         padding: 10px 0 80px;
     }
-
-
     .tools-card {
         padding: 25px;
     }
-
 }
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
 
 @media (max-width: 576px) {
 
     .container {
         padding: 0 20px;
     }
-
-
-    .nav-container {
-        height: 70px;
-    }
-
-
-    .nav-links {
-        gap: 10px;
-    }
-
-
-    .nav-links a {
-        font-size: 0.75rem;
-    }
-
-
-    .nav-button {
-        display: none;
-    }
-
-
     .skills-hero {
         padding: 120px 0 50px;
     }
-
-
     .skills-hero h1 {
         font-size: 2.3rem;
     }
-
-
     .skills-intro {
         font-size: 0.9rem;
     }
-
-
     .section-heading {
         margin-bottom: 30px;
     }
-
-
     .section-heading h2 {
         font-size: 1.8rem;
     }
-
-
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-
-
     .skill-card {
         padding: 24px 20px;
     }
-
-
     .tools-card {
         grid-template-columns: 1fr;
         padding: 20px;
         gap: 15px;
     }
-
-
     .tool-item {
         padding: 24px 20px;
     }
-
-
     .footer {
         padding: 40px 0;
     }
-
 }
